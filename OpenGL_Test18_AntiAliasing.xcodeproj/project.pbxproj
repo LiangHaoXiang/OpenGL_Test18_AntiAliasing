@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		AB6E13C126BB878F009350DA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6E13C026BB878F009350DA /* main.cpp */; };
+		AB6E13C926BB87AE009350DA /* libassimp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6E13C826BB87AE009350DA /* libassimp.dylib */; };
+		AB6E13CB26BB87B2009350DA /* libGLEW.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6E13CA26BB87B2009350DA /* libGLEW.dylib */; };
+		AB6E13CD26BB87B6009350DA /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6E13CC26BB87B6009350DA /* libglfw.dylib */; };
+		AB6E13DF26BB9236009350DA /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = AB6E13DE26BB9236009350DA /* glad.c */; };
+		AB6E13E426BB92A1009350DA /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6E13E026BB92A1009350DA /* Camera.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,18 @@
 /* Begin PBXFileReference section */
 		AB6E13BD26BB878F009350DA /* OpenGL_Test18_AntiAliasing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGL_Test18_AntiAliasing; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6E13C026BB878F009350DA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AB6E13C826BB87AE009350DA /* libassimp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.dylib; path = ../../../assimp/5.0.1/lib/libassimp.dylib; sourceTree = "<group>"; };
+		AB6E13CA26BB87B2009350DA /* libGLEW.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.dylib; path = ../../../glew/2.2.0_1/lib/libGLEW.dylib; sourceTree = "<group>"; };
+		AB6E13CC26BB87B6009350DA /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = ../../../glfw/3.3.4/lib/libglfw.dylib; sourceTree = "<group>"; };
+		AB6E13DE26BB9236009350DA /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = ../../../../glad/src/glad.c; sourceTree = "<group>"; };
+		AB6E13E026BB92A1009350DA /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		AB6E13E126BB92A1009350DA /* Camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
+		AB6E13E226BB92A1009350DA /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		AB6E13E326BB92A1009350DA /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		AB6E13E626BB92AD009350DA /* LightVertexShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LightVertexShader.cpp; sourceTree = "<group>"; };
+		AB6E13E726BB92AD009350DA /* LightFragmentShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LightFragmentShader.cpp; sourceTree = "<group>"; };
+		AB6E13EC26BB92AD009350DA /* LampVertexShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LampVertexShader.cpp; sourceTree = "<group>"; };
+		AB6E13ED26BB92AD009350DA /* LampFragmentShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LampFragmentShader.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB6E13CD26BB87B6009350DA /* libglfw.dylib in Frameworks */,
+				AB6E13C926BB87AE009350DA /* libassimp.dylib in Frameworks */,
+				AB6E13CB26BB87B2009350DA /* libGLEW.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +63,7 @@
 			children = (
 				AB6E13BF26BB878F009350DA /* OpenGL_Test18_AntiAliasing */,
 				AB6E13BE26BB878F009350DA /* Products */,
+				AB6E13C726BB87AE009350DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +78,44 @@
 		AB6E13BF26BB878F009350DA /* OpenGL_Test18_AntiAliasing */ = {
 			isa = PBXGroup;
 			children = (
+				AB6E13EB26BB92AD009350DA /* LampShader */,
+				AB6E13E526BB92AD009350DA /* LightShader */,
+				AB6E13E026BB92A1009350DA /* Camera.cpp */,
+				AB6E13E126BB92A1009350DA /* Camera.hpp */,
+				AB6E13E226BB92A1009350DA /* Shader.h */,
+				AB6E13E326BB92A1009350DA /* stb_image.h */,
+				AB6E13DE26BB9236009350DA /* glad.c */,
 				AB6E13C026BB878F009350DA /* main.cpp */,
 			);
 			path = OpenGL_Test18_AntiAliasing;
+			sourceTree = "<group>";
+		};
+		AB6E13C726BB87AE009350DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB6E13CC26BB87B6009350DA /* libglfw.dylib */,
+				AB6E13CA26BB87B2009350DA /* libGLEW.dylib */,
+				AB6E13C826BB87AE009350DA /* libassimp.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB6E13E526BB92AD009350DA /* LightShader */ = {
+			isa = PBXGroup;
+			children = (
+				AB6E13E626BB92AD009350DA /* LightVertexShader.cpp */,
+				AB6E13E726BB92AD009350DA /* LightFragmentShader.cpp */,
+			);
+			path = LightShader;
+			sourceTree = "<group>";
+		};
+		AB6E13EB26BB92AD009350DA /* LampShader */ = {
+			isa = PBXGroup;
+			children = (
+				AB6E13EC26BB92AD009350DA /* LampVertexShader.cpp */,
+				AB6E13ED26BB92AD009350DA /* LampFragmentShader.cpp */,
+			);
+			path = LampShader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +175,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB6E13C126BB878F009350DA /* main.cpp in Sources */,
+				AB6E13E426BB92A1009350DA /* Camera.cpp in Sources */,
+				AB6E13DF26BB9236009350DA /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +298,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../glfw/3.3.4/include\"",
+					"\"$(SRCROOT)/../../../glm/0.9.9.8/include\"",
+					"\"$(SRCROOT)/../../../glew/2.2.0_1/include\"",
+					"\"$(SRCROOT)/../../../assimp/5.0.1/include\"",
+					"\"$(SRCROOT)/../../../glad/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../glew/2.2.0_1/lib\"",
+					"\"$(SRCROOT)/../../../assimp/5.0.1/lib\"",
+					"\"$(SRCROOT)/../../../glfw/3.3.4/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +318,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../glfw/3.3.4/include\"",
+					"\"$(SRCROOT)/../../../glm/0.9.9.8/include\"",
+					"\"$(SRCROOT)/../../../glew/2.2.0_1/include\"",
+					"\"$(SRCROOT)/../../../assimp/5.0.1/include\"",
+					"\"$(SRCROOT)/../../../glad/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../glew/2.2.0_1/lib\"",
+					"\"$(SRCROOT)/../../../assimp/5.0.1/lib\"",
+					"\"$(SRCROOT)/../../../glfw/3.3.4/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
